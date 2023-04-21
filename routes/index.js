@@ -7,4 +7,8 @@ router.use((req, res) => {
   res.status(404).send("<h1>N/A</h1>");
 });
 
+router.get('/', (req, res) =>{
+  res.send('sending index')
+})
+
 module.exports = router;

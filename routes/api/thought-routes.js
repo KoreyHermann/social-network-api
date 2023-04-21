@@ -20,5 +20,8 @@ router
 router.route("/:thoughtId/reactions").post(addReaction);
 
 router.route("/:thoughtId/reactions/:reactionId").delete(removeReaction);
+router.get('/', (req, res) =>{
+  res.send('sending api/thought-routes')
+})
 
 module.exports = router;
