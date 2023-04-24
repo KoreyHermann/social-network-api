@@ -19,11 +19,6 @@ app.use('/routes/api/index', apiRoutes);
 // app.use('/routes/api/thought-routes', thoughtRoutes);
 // app.use('/routes/api/user-routes', userRoutes);
 
-db.once("open", () => {
-  app.listen(PORT, () => {
-    console.log(`API server running on port ${PORT}!`);
-  });
-});
 app.listen(PORT, () => {
   console.log(`app is listening on ${PORT}`)
 })
