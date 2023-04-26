@@ -1,4 +1,6 @@
 const router = require("express").Router();
+// const { User, Thought } = require('');
+const { Thought, User } = require('../../models');
 const {
   getAllUser,
   getUserById,
