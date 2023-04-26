@@ -10,7 +10,6 @@ connection.once('open', async () => {
 
     await Thought.deleteMany({});
 
-    // Add students to the collection and await the results
     await User.collection.insertMany([
         {
             username: 'Walter White',
@@ -18,13 +17,11 @@ connection.once('open', async () => {
         },
     ]);
 
-    // Add courses to the collection and await the results
     await Thought.collection.insertMany([{
         thoughtText: 'Hello',
         username: 'Walter White'
     }]);
 
-    // Log out the seed data to indicate what should appear in the database
     console.info('Seeding complete! 🌱');
     process.exit(0);
 });
